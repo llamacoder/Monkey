@@ -1,0 +1,74 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Picker</title>
+  <link rel="stylesheet" href="{% static 'css/normalize.css'%}"></link>
+  <link rel="stylesheet" href="{% static 'css/main.css'%}"></link>
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</head>
+
+<body>
+  <!-- set up header -->
+  <div class="header">
+    <h1>Pick Your Winners!</h1>
+    <h4>Pick the winner of each game, and use the arrow buttons to
+         order the games according to your confidence in your choice.  The
+         top game on the list is worth +- 16 points, so choose wisely!
+      </h4>
+  </div>
+  <div class="content">
+
+    <!-- set up a header bar for game table display -->
+    <div class="headerBar">
+      <h3>Week 1 Games</h3>
+    </div>
+
+    <!-- set up a container of games -->
+    <div class="gameListContainer">
+      <!-- add games -->
+      <section>
+        <div class="game">
+          <table>
+            <tr>
+              <td class="firstUpArrow upArrow"><img src="{% static 'images/upArrow.png' %}" width="40px" alt=""></td>
+              <td class="unselected awayTeam" data-imgsel="{% static 'images/chiefsSel.jpg' %}" data-imgunsel="{% static 'images/chiefs.jpg' %}" rowspan="2"><img src="{% static 'images/chiefs.jpg' %}" width="100px" alt=""></td>
+              <td class="selected homeTeam" data-imgsel="{% static 'images/patriotsSel.jpg' %}" data-imgunsel="{% static 'images/patriots.jpg' %}" rowspan="2"><img src="{% static 'images/patriotsSel.jpg' %}" width="100px" alt=""></td>
+              <td rowspan="2" class="points">16</td>
+            </tr>
+            <tr>
+              <td class="downArrow"><img src="{% static 'images/downArrow.jpg' %}" width="40px" alt=""></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section>
+        <div class="game">
+          <table>
+            <tr>
+              <td class="firstUpArrow upArrow"><img src="{% static 'images/upArrow.png' %}" width="40px" alt=""></td>
+              <td class="unselected awayTeam" data-imgsel="{% static 'images/chargersSel.jpg' %}" data-imgunsel="{% static 'images/chargers.jpg' %}" rowspan="2"><img src="{% static 'images/chargers.jpg' %}" width="100px" alt=""></td>
+              <td class="selected homeTeam" data-imgsel="{% static 'images/broncosSel.jpg' %}" data-imgunsel="{% static 'images/broncos.jpg' %}" rowspan="2"><img src="{% static 'images/broncosSel.jpg' %}" width="100px" alt=""></td>
+              <td rowspan="2" class="points">15</td>
+            </tr>
+            <tr>
+              <td class="downArrow"><img src="{% static 'images/downArrow.jpg' %}" width="40px" alt=""></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <div class="centerButton">
+        <!--        <button id="saveButton" type="button" >Save</button>  -->
+      </div>
+
+    </div>
+    <!-- content -->
+
+</body>
+
+</html>
